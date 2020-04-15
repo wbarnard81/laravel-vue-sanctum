@@ -1932,6 +1932,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2046,7 +2048,12 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  methods: {}
+  methods: {},
+  mounted: function mounted() {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("api/user").then(function (res) {
+      return console.log(res);
+    });
+  }
 });
 
 /***/ }),
@@ -37703,7 +37710,7 @@ var render = function() {
             _vm._v("Logo")
           ]),
           _vm._v(" "),
-          _c("ul", { staticClass: "left hide-on-med-and-down" }, [
+          _c("ul", { staticClass: "left" }, [
             _c(
               "li",
               [
